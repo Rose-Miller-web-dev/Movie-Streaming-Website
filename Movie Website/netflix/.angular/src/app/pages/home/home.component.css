@@ -1,0 +1,74 @@
+.header_overview_box{
+    background-color: rgb(168,187,176, 0.6);
+}
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    
+}
+
+.rowimg{
+    width: 15%;
+    object-fit: contain;
+    box-sizing: content-box;
+    transition: transform 450ms;
+}
+
+.homepage_banner{
+    height: 75%;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    transition: transform 500ms;
+    cursor: pointer;
+}
+
+.homepage_banner:hover{
+    transform: scale(1.03);
+}
+
+body::before{    
+   
+    display: block;
+    content: '';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #1e1e19;
+}
+
+.rowimg:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.rowposter::-webkit-scrollbar{
+    display: none; 
+}
+
+.banner_title{
+    font-weight: bold;
+    color: #0A0A00;
+    transition: transform 500ms;
+    cursor: pointer;
+}
+
+.banner_title:hover{
+    transform: scale(1.04);
+}
+
+.banner_overview{
+    color: #0A0A00;
+}
+
+.trend_section{
+    background-color: #0A0A00;
+}
+
+.trend_title{
+    font-weight: bold;
+    color: #D01110;
+}

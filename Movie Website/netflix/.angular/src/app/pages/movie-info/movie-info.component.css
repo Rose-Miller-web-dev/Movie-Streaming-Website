@@ -1,0 +1,154 @@
+.poster_pic{
+    width: 60%;
+}
+
+.movie_poster{
+    width: 50%;
+}
+
+body{
+    background-color: #1e1e19;
+}
+
+.movie_title{
+    font-weight: bold;
+    font-size: 30px;
+    color: #D01110;
+    
+}
+
+.movie-row{
+    align-items: center;
+}
+
+.movie-identity{
+    position: relative;
+    right: 40%;
+    bottom: 20%;
+}
+
+.btn{
+    padding: 2%;
+    color: beige;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    background-color: #D01110;
+    color: beige;
+    font-size: 20px;
+
+}
+
+.btn:hover{
+    background-color: #1e1e19;
+    border-color: #FF0000;
+    color: #FF0000;
+    color: beige;
+}
+
+a:hover{
+    color: #FF0000;
+}
+
+.btn:focus{
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.leading-text{
+    color: beige;
+}
+
+@media(min-width: 570px){
+    .movie_title{
+        position: relative;
+        right: 30%;
+        bottom: 40%;
+    }
+
+    .movie_overview{
+        position: relative;
+        right: 30%;
+        bottom: 35%;
+    }
+
+    .btn{
+        position: relative;
+        right: 31%;
+        top: 30%;
+    }
+
+    .actor-name{
+        color: beige;
+        position: relative;
+        top: 8%;
+    }
+    
+    .actor-role{
+        color: beige;
+        position: relative;
+        top: 6%;
+    }
+
+    .text-warning{
+        position: relative;
+        right: 27%;
+        bottom: 23%;
+    }
+    
+}
+
+@media(max-width: 800px){
+    .movie_title{
+        position: relative;
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .movie_overview{
+        position: relative;
+        left: 5%;
+        bottom: 15%;
+    }
+
+    .btn{
+        position: relative;
+        left: 5%;
+        top: 10%;
+    }
+
+    .text-warning{
+        position: relative;
+        left: 8%;
+        bottom: 13%;
+    }
+}
+
+.actor-name{
+    color: beige;
+}
+
+.actor-role{
+    color: beige;
+}
+
+.cast_title{
+    color: beige;
+}
+
+.rate-box{
+    border-color: #FF0000;
+    width: 50px;
+    border-width: 4px;
+    border-radius: 0%;
+}
+
+.border-danger{
+    color: #FF0000;
+    width: 10px;
+}
+

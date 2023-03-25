@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+    
+            <div class="row d-block d-sm-flex movie-row align-items-sm-center">
+                <div class="col-lg-6" *ngIf="movie_info.poster_path">
+                    <img class="movie_poster m-5" src="https://image.tmdb.org/t/p/original/{{ movie_info.poster_path }}">
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="movie_title m-3">{{ movie_info.original_title }}</h2>
+                            <p class="leading-text movie_overview m-3">{{ movie_info.overview }}</p>  
+                            <div class="rate-vote" style="position: relative; right: 27%; bottom: 20%;">
+                                <h6 class="text-white rate-box border-secondary border-bottom border-3 my-3 py-2 px-0" style="width: 90px; border-color: #FF0000;">Rate : {{ movie_info.vote_average }}</h6>
+                                <h6 class="text-white votes" >{{ movie_info.vote_count }} Votes</h6>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col">
+                            <a class="my-5 p-4 align-self-start" href="https://www.themoviedb.org/video/play?key={{ movie_video }}" target="_blank"><button class="btn p-3 w-50">Watch Trailer</button></a>
+                        </div>
+                    </div>              
+                </div>                   
+            </div>
+
+            <div class="row m-3">
+                <h3 class="cast_title my-3 mx-3">Cast</h3>
+                <div class="row" >
+                    <div class="col-lg-4 d-flex" *ngFor="let c of movie_cast">
+                        <div class="actor-container m-2 d-flex">
+                            <div class="col-lg-4" *ngIf="c.profile_path">
+                                <img class="movie_poster m-2" src="https://image.tmdb.org/t/p/original/{{ c.profile_path }}">
+                            </div>
+                            <div class="col-lg-8">
+                                <h5 class="actor-name">{{ c.original_name }}</h5> 
+                                <p class="actor-role">{{ c.character }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </body>
+</html>

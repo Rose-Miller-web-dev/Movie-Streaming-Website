@@ -1,0 +1,45 @@
+<html>
+    <head>
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <form action="" class="p-4" [formGroup]="search_form" (ngSubmit)="submitForm()">
+                <div class="row d-flex">
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" formControlName="movieName" placeholder="search...">
+                    </div>
+
+                    <div class="col-lg-2">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="row mt-2 search_result_list align-items-center justify-content-around">
+                <div *ngFor="let movie of search_result" class="col-lg-5 m-4 movie_conteiner" >
+                    <div class="row">
+                        <div class=" p-2 d-flex movie_inner w-100">
+                            <div class="col-4 " *ngIf="movie.poster_path">
+                                <img class="search_result_pic m-2 mt-1" src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}" alt="..."
+                                [routerLink]="['/movie',movie.id]">
+                                
+                            </div>
+            
+                            <div class="col-lg-8 ">
+                                <h3 class="my-3 search_result_title m-2 ms-5 mt-5" [routerLink]="['/movie',movie.id]">{{ movie.original_title }}</h3>
+                                <p class="leading-text m-2 ms-5 text-white">{{ movie.overview }}</p>
+                                <p class="text-warning ms-5">Rate : {{ movie.vote_average }}</p>
+                                
+                            </div> 
+                        </div>  
+                        <button class="btn m-4 watch-btn p-3 w-50 ms-2 align-self-center" [routerLink]="['/movie',movie.id]">Watch Movie</button>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
